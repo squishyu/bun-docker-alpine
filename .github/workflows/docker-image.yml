@@ -3,9 +3,6 @@ name: Docker Image CI
 on:
     schedule:
         - cron: "0 0 * * 1"
-    workflow_run:
-        branches: [ "main" ]
-        
 
 jobs:
   docker:
