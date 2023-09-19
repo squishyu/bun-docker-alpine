@@ -1,4 +1,4 @@
-name: Bun Alpine nightly canary Docker publish
+name: Nightly canary build
 
 on:
     workflow_dispatch:
