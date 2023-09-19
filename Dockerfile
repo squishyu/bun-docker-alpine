@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM node:18-alpine
+FROM node:${NODE_MAJOR:-20}-alpine
 # Add dependencies to get Bun working on Alpine
 RUN apk --no-cache add ca-certificates wget
 
