@@ -1,0 +1,6 @@
+build-and-push.sh
+
+.git
+README.md
+
+*.kate-swp
