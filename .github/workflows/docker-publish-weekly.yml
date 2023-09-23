@@ -20,9 +20,10 @@ jobs:
         with:
             username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
       - name: Get latest Bun version
         id: version
-        uses: oven-sh/setup-bun@v1
         run: echo "VERSION=$(bun --version)" >> $GITHUB_OUTPUT
       - name: Build and push
         uses: docker/build-push-action@v5
