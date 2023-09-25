@@ -21,3 +21,6 @@ RUN if [[ $(uname -m) == "aarch64" ]] ; \
 ARG BUN_VERSION
 # Install Bun
 RUN npm install -g bun@${BUN_VERSION:-latest}
+
+# Remove NPM (should be no longer necessary)
+RUN rm -rf /usr/local/lib/node_modules/npm
