@@ -21,3 +21,9 @@ RUN if [[ $(uname -m) == "aarch64" ]] ; \
 ARG BUN_VERSION
 # Install Bun
 RUN npm install -g bun@${BUN_VERSION:-latest}
+
+RUN if [[ ! $(uname -m) == "aarch64" ]] ; \
+    then \
+    rm /usr/local/bin/bun ; \
+    ln -s /usr/local/lib/node_modules/bun/node_modules/@oven/bun-linux-x64-baseline/bin/bun /usr/local/bin/bun ; \
+    fi
